@@ -1,0 +1,15 @@
+show dbs
+use assignment
+db.createCollection("users")
+db.users.insert({"first_name":"Prateek"},{"last_name":"Shukla"},{"email":"prateek@gamil.com"},{"gender":"male"},{"ip_address":"00.00.15.01"},{"age":35})
+db.users.insert({"first_name":"Nrupul"},{"last_name":"Dev"},{"email":"nrupul@gamil.com"},{"gender":"male"},{"ip_address":"00.00.15.02"},{"age":38})
+db.users.insertMany([{"first_name":"Yogesh","last_name":"Bhatt","email":"yogesh@gamil.com","gender":"male","ip_address":"00.00.15.03","age":22},{"first_name":"Shasank","last_name":"Singh","email":"shansank@gamil.com","gender":"male","ip_address":"00.00.15.04","age":26},{"first_name":"Suraj","last_name":"Gupta","email":"suraj@gamil.com","gender":"male","ip_address":"00.00.15.05","age":32},{"first_name":"Raunak","last_name":"Singh","email":"raunak@gamil.com","gender":"male","ip_address":"00.00.15.06","age":15}])
+db.users.insertMany([{"first_name":"James","last_name":"Watt","email":"watt@gamil.com","gender":"male","ip_address":"00.00.15.04","age":42},{"first_name":"Christiano","last_name":"Ronaldo","email":"ronaldo@gamil.com","gender":"male","ip_address":"00.00.15.08","age":27},{"first_name":"Roger","last_name":"Federer","email":"roger@gamil.com","gender":"male","ip_address":"00.00.15.09","age":289},{"first_name":"Leone","last_name":"Messi","email":"leone@gamil.com","gender":"male","ip_address":"00.00.15.10","age":45}])
+db.users.find({}).pretty()
+db.users.findOne({age:28})
+db.users.update({first_name:"Suraj"},{$set:{Place:"Ballia"}})
+db.users.updateMany({},{$set:{country:"India"}})
+db.users.remove({age:22})
+db.users.deleteOne({country:"India"})
+db.users.deleteMany({country:"India"})
+db.dropDatabase()
