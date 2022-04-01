@@ -1,6 +1,7 @@
 use Unit4
 db.movies.find({}).pretty()
-db.movies.find({movie_name:{$eq:"Dracula"}},{movie_name:1,production_year:1,_id:0}).pretty()
+db.movies.find({movie_name:{$eq:"
+"Absent-Minded Professor"}},{movie_name:1,production_year:1,_id:0}).pretty()
 db.movies.find({movie_name:{$ne:"Candy"}},{movie_name:1,production_year:1,_id:0}).pretty()
 db.movies.find({budget:{$gte:15000}},{movie_name:1,production_year:1,_id:0}).pretty()
 db.movies.find({budget:{$lte:11000.00}},{movie_name:1,production_year:1,_id:0}).pretty()
