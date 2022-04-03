@@ -1,6 +1,6 @@
 const express = require("express");
 const crudController = require("./crudController");
-const Batch = require("../models/batchModel.js");
+const Batch = require("../models/batchModel");
 const router = express.Router();
 
 router.post("/", crudController.post(Batch));
